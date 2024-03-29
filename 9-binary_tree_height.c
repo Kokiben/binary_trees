@@ -20,6 +20,9 @@ Left_Heigh = binary_tree_height(tree->left);
 /* Recursively compute the height of the right subtree */
 Right_High = binary_tree_height(tree->right);
 /* Return the max of the left and right subtree heights */
-return (1 + (Left_Heigh > Right_High ? Left_Heigh : Right_High));
+if (Left_Heigh > Right_High)
+return (Left_Heigh + 1);
+else
+return (Right_Heigh + 1);
 
 }
