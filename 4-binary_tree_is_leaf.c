@@ -15,6 +15,6 @@ if (node == NULL)
 return (0);
 }
 /* check if a node is a has no children */
-return ( node->left == NULL && node->right == NULL)
+return ( node->left == NULL && node->right == NULL);
 
 }
