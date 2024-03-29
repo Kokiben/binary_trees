@@ -37,9 +37,9 @@ if (tree == NULL)
 return (0); /* If tree is NULL, returns 0. */
 }
 /* compute the height of the left and right subtrees */
-size_t Left_Heigh = binary_tree_height(tree->left);
-size_t Right_High = binary_tree_height(tree->right);
+int Left_Heigh = binary_tree_height(tree->left);
+int Right_Heigh = binary_tree_height(tree->right);
 /* return the balance factor (diffrence of left and right subtrees */
-return (Left_Heigh - Right_High);
+return (Left_Heigh - Right_Heigh);
 
 }
