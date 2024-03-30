@@ -7,7 +7,8 @@
  *
  * Return: return a pointer to lowest common ancestor node of 2 given nodes
  */
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+		const binary_tree_t *second)
 {
 const binary_tree_t *ancstr = first;
 
