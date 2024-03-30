@@ -16,11 +16,9 @@ node->parent == NULL || node->parent->parent == NULL)
 return (NULL);
 }
 if (node->parent->parent->left == node->parent)
-{
 /* Return the right child (uncle) */
 return (node->parent->parent->right);
 else
 /* Return the left child (uncle) */
 return (node->parent->parent->left);
-}
 }
