@@ -9,7 +9,7 @@
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
 /* Check if node's parent or  NULL */
-if (node == NULL || 
+if (node == NULL ||
 node->parent == NULL || node->parent->parent == NULL)
 /* Check if node is NULL */
 return (NULL);
