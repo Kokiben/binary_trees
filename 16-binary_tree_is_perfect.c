@@ -11,7 +11,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 size_t  Left_Heigh = 0, Right_Heigh = 0;
 
 if (tree == NULL)
-return (0);/* If tree is NULL, returns 0. */
+return (0); /* If tree is NULL, returns 0. */
 
 if (tree->left)
 /* Recursively compute the height of the left subtree */
@@ -31,19 +31,20 @@ return ((Left_Heigh > Right_Heigh) ? Left_Heigh : Right_Heigh);
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
+int child = 0;
+
 if (tree == NULL)
-return (0);
-
-size_t height = binary_tree_height(tree);
-
-size_t nodes = 1;
-size_t level = 0;
-
-while (level < height)
 {
-nodes *= 2;
-level++;
+return (0);
+/* If tree is NULL, returns 0. */
 }
-
-return (nodes - 1 == binary_tree_size(tree));
+else
+{
+child = binary_tree_height(tree);
+if (child != 0)
+{
+return (1);
+}
+return (0);
+}
 }
