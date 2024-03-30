@@ -45,6 +45,7 @@ if (child != 0)
 {
 return (1);
 }
+/* If the current node has only one child, tree is not full */
 return (0);
 }
 }
