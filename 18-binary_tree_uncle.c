@@ -8,31 +8,15 @@
  */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
+/* Check if node's parent or  NULL */
+if (node == NULL || 
+node->parent == NULL || node->parent->parent == NULL)
 /* Check if node is NULL */
-if (node == NULL)
-{
 return (NULL);
-}
-/* Check if node's parent or Gradparent is NULL */
-if (node->parent == NULL || node->parent->parent == NULL)
-{
-return (NULL);
-}
-
-binary_tree_t *Gradparent = node->parent->parent;
-/* Check if node's parent is the left child of the Gradparent */
-if (Gradparent->left == node->parent)
-{
-/* Return the right child of the Gradparent (uncle) */
-return (Gradparent->right);
-}
-/* Check if node's parent is the right child of the Gradparent */
-if (Gradparent->right == node->parent)
-{
-/* Return the left child of the Gradparent (uncle)*/
-return (Gradparent->left);
-}
-
-/* Node's parent is not a child of its Gradparent */
-return (NULL);
+if (node->parent->parent->left == node->parent)
+/* Return the right child (uncle) */
+return (node->parent->parent->right);
+else
+/* Return the left child (uncle) */
+return (node->parent->parent->left);
 }
