@@ -13,20 +13,16 @@ if (node == NULL || node->parent == NULL)
 {
 return (NULL);
 }
-    
 /* Check if node is the left child of its parent */
 if (node->parent->left == node)
 {
 return (node->parent->right);
 }
-    
 /* Check if node is the right child of its parent */
 if (node->parent->right == node)
 {
 return (node->parent->left);
 }
-    
 /* Node is not a child of its parent */
 return (NULL);
 }
-
